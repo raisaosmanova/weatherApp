@@ -1,49 +1,3 @@
-// const weatherInput = document.getElementById("cityInput");
-// const weatherButton = document.getElementById("fetchButton");
-// const weatherResult = document.getElementById("weatherResult");
-
-// weatherButton.addEventListener("click", () => {
-//     const city = weatherInput.value;
-//     fetchWeather(city);
-//     weatherInput.value = "";
-
-// });
-
-// async function fetchWeather(city) {
-//     try {
-//         const apiKey = "58187a9aba880c8153f3298cc39a9615";
-//         const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-//         const res = await fetch(url);
-//         weatherResult.style.display = "block";
-//         const data = await res.json();
-//         console.log(data);
-//         renderWeather(data);
-//     }
-//     catch (error) {
-//         console.error("Error fetching weather data:", error);
-//     } finally {
-//         console.log("Fetch attempt finished.");
-//     }
-// }
-
-// function renderWeather(data) {
-//         weatherResult.innerHTML = `
-//             <h2> 🌤 Weather in ${data.name}, ${data.sys.country}</h2>
-//             <p>🌡 Temperature: ${data.main.temp} °C</p>
-//             <p>☁️ Weather: ${data.weather[0].description}</p>
-//             <p>💧 Humidity: ${data.main.humidity}%</p>
-//             <p>🌬 Wind Speed: ${data.wind.speed} m/s</p>
-//             <p>⚡  Pressure: ${data.main.pressure} hPa</p>
-//             <p>👁 Visibility: ${data.visibility} meters</p>
-//             <p>☁ Cloudiness: ${data.clouds.all}%</p>
-//             <p>🌅 Sunrise: ${new Date(data.sys.sunrise * 1000).toLocaleTimeString()}</p>
-//             <p>🌇Sunset: ${new Date(data.sys.sunset * 1000).toLocaleTimeString()}</p>
-            
-//         `;
-//         // weatherResult.classList.remove("hidden");
-   
-// }
-
 
 const weatherInput = document.getElementById("cityInput");
 const weatherButton = document.getElementById("fetchButton");
@@ -88,9 +42,9 @@ function renderWeather(data) {
     `;
 }
 
-// Background & Animations
+
 function setBackground(weather) {
-    // Remove existing raindrops/snowflakes
+    
     document.querySelectorAll('.raindrop, .snowflake').forEach(el => el.remove());
 
     const body = document.body;
